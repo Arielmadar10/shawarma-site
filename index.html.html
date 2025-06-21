@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>שווארמה הנביאים</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Heebo', sans-serif;
+      direction: rtl;
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.93);
+      min-height: 100%;
+      padding-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .decor-left, .decor-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.15;
+      max-width: 150px;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+    .decor-left {
+      left: 10px;
+    }
+    .decor-right {
+      right: 10px;
+      transform: translateY(-50%) scaleX(-1);
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #2e2e2e;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #666;
+      margin: 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn.whatsapp {
+      background-color: #1eb980;
+    }
+
+    .btn.phone {
+      background-color: #ff7043;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .gallery {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px; /* גובה אחיד */
+      object-fit: cover; /* שמירה על פרופורציות */
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .map {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      color: #888;
+      position: relative;
+      z-index: 2;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+
+    <header>
+      <div class="logo">שווארמה הנביאים</div>
+      <p class="tagline">הטעם שמרגישים מהביס הראשון – שווארמה טרייה, עסיסית ואותנטית בנתניה</p>
+    </header>
+
+    <div class="buttons">
+      <a class="btn whatsapp" href="https://wa.me/972524524539" target="_blank">📱 הזמינו בוואטסאפ</a>
+      <a class="btn phone" href="tel:0524524539">📞 התקשרו להזמנה</a>
+    </div>
+
+    <section class="gallery" aria-label="גלריית תמונות">
+      <img src="images/niv3.jpg" alt="שווארמה עסיסית" loading="lazy" />
+      <img src="images/niv.jpg" alt="מנה מוגשת ללקוח" loading="lazy" />
+      <img src="images/niv1.jpg" alt="שווארמה עם תוספות" loading="lazy" />
+    </section>
+
+    <section class="map" aria-label="מפת מיקום">
+      <iframe
+        src="https://maps.google.com/maps?q=האומנות 8, נתניה&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <footer>
+      © 2025 שווארמה הנביאים - האומנות 8, נתניה | עיצוב וביצוע: אריאל מדר
+    </footer>
+
+  </div>
+
+  <!-- קישקושים וקטוריים בצדדים -->
+  <svg class="decor-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#6b8e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- פיתה -->
+    <ellipse cx="32" cy="32" rx="30" ry="20" fill="#c4d3a1" />
+    <path d="M10 32c10-15 44-15 44 0" stroke="#8a9a4e" />
+    <circle cx="22" cy="25" r="3" fill="#f9f4d6" />
+    <circle cx="42" cy="40" r="4" fill="#f9f4d6" />
+  </svg>
+
+  <svg class="decor-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#6b8e23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- סכין ומזלג -->
+    <path d="M20 10l10 44" stroke="#8a9a4e" />
+    <path d="M30 10l-10 44" stroke="#8a9a4e" />
+    <rect x="17" y="5" width="3" height="15" fill="#a7c17a" />
+    <rect x="27" y="5" width="3" height="15" fill="#a7c17a" />
+  </svg>
+
+</body>
+</html>
